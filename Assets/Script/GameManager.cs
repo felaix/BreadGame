@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -10,25 +11,40 @@ public class GameManager : MonoBehaviour
 
     public GameObject levelUpCanvas;
     public GameOverUI gameOverCanvas;
-    public TMP_Text coinTMP;
+    private GameStatsUI statsUI;
 
     public int Level = 0;
     public int Coins = 0;
+    public int Distance = 0;
+    public int Kills = 0;
 
     private void Awake()
     {
         Instance = this;
     }
 
+    private void LateUpdate()
+    {
+        Distance = (int) Player.Instance.GetDistance();
+        statsUI.SetGameUI(StatType.Distance, Distance.ToString());
+    }
+
     private void Start()
     {
         LevelUp();
+        statsUI = GameStatsUI.Instance;
     }
 
     public void AddCoin()
     {
         Coins++;
-        coinTMP.text = Coins.ToString();
+        statsUI.SetGameUI(StatType.Coin, Coins.ToString());
+    }
+
+    public void AddKill()
+    {
+        Kills++;
+        statsUI.SetGameUI(StatType.Kills, Kills.ToString());
     }
 
     public void GameOver()

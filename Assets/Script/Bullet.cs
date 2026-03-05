@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float damage = 2f;
     [SerializeField] private float lifeTime = 1f;
     [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private Sprite gunSprite;
 
     private Animator anim;
     private Vector2 direction = Vector2.right;
@@ -18,6 +19,8 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
+        GameStatsUI.Instance.SetGameUI(StatType.Power, damage.ToString());
+        GameStatsUI.Instance.SetGameUI(StatType.Range, lifeTime.ToString());
         Destroy(gameObject, lifeTime);
     }
 

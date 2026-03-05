@@ -63,12 +63,23 @@ public class Health : MonoBehaviour
         if (currentHP < 0)
         {
             hpSlider.gameObject.SetActive(false);
+
             if (!isDead && anim != null) anim.Play("Dead");
+
             if (coinPrefab != null)
             {
                 Instantiate(coinPrefab, transform.position, Quaternion.identity);
             }
-            if (isPlayer) { GameManager.Instance.GameOver(); }
+
+            if (isPlayer) 
+            { 
+                GameManager.Instance.GameOver(); 
+            }
+            else
+            {
+                GameManager.Instance.AddKill();
+            }
+
             isDead = true;
             StartCoroutine(DelayDeactivation());
             return;

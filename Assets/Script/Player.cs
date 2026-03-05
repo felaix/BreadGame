@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firePoint;
+    [SerializeField] private SpriteRenderer gunSR;
 
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
@@ -13,6 +14,7 @@ public class Player : MonoBehaviour
     private BreadInpuSystem input;
     private float nextFireTime;
     public float fireCooldown;
+    private float startX;
 
     private Vector2 moveInput;
 
@@ -31,6 +33,11 @@ public class Player : MonoBehaviour
         // Movement input
         input.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         input.Player.Move.canceled += ctx => moveInput = Vector2.zero;
+
+        startX = transform.position.x;
+
+        GameStatsUI.Instance.SetGameUI(StatType.Cooldown, fireCooldown.ToString());
+        GameStatsUI.Instance.SetGameUI(StatType.Speed, moveSpeed.ToString());
     }
 
     private void OnDisable()
@@ -60,6 +67,11 @@ public class Player : MonoBehaviour
         TryShoot();
     }
 
+    public void AssignNewGun(Sprite newGun)
+    {
+        gunSR.sprite = newGun;
+    }
+
     private void TryShoot()
     {
         if (Time.time < nextFireTime) return;
@@ -78,8 +90,19 @@ public class Player : MonoBehaviour
         moveSpeed += amount;
     }
 
+    public float GetMoveSpeed()
+    {
+        return moveSpeed;
+    }
+
     public void AssignNewBullet(GameObject bullet)
     {
         bulletPrefab = bullet;
+
+    }
+
+    public float GetDistance()
+    {
+        return transform.position.x - startX;
     }
 }

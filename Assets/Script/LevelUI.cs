@@ -4,6 +4,7 @@ using UnityEngine;
 public class LevelUI : MonoBehaviour
 {
     [SerializeField] private Transform modifierSpawnBox;
+    [SerializeField] private GameObject gameStats;
 
     private Animator anim;
 
@@ -15,7 +16,13 @@ public class LevelUI : MonoBehaviour
     private void OnEnable()
     {
         anim.Play("FadeIn");
+        gameStats.SetActive(false);
         StartCoroutine(DelayedTimeScale());
+    }
+
+    private void OnDisable()
+    {
+        gameStats.SetActive(true);
     }
 
     public void SetTimeScale(float scale)

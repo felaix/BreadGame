@@ -19,6 +19,8 @@ public class Undead : MonoBehaviour
     private float knockTimer;
 
     private bool attacking = false;
+    private bool isGrounded = false;
+    private GameObject player = null; 
 
     private void Awake()
     {
@@ -34,10 +36,29 @@ public class Undead : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Ground") && !isGrounded)
+        {
+            isGrounded = true;
+        }
+
         if (collision.CompareTag("Tower") || collision.CompareTag("Player"))
         {
             Debug.Log("Player or Tower in range");
             StartCoroutine(AttackLoop());
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
+
+        if (collision.CompareTag("Player")) {
+            attacking = false;
+            targetHp = null;
+            UpdateTarget();
         }
     }
 
@@ -48,6 +69,8 @@ public class Undead : MonoBehaviour
 
     private void UpdateTarget()
     {
+        if (!isGrounded) return;
+
         GameObject[] turretObjects = GameObject.FindGameObjectsWithTag("Tower");
 
         Transform closestTurret = null;
@@ -77,12 +100,12 @@ public class Undead : MonoBehaviour
         }
 
         // No turrets alive → target player
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
+        if (player == null) { player = Player.Instance.gameObject; }
+        else
         {
-            target = playerObj.transform;
+            target = player.transform;
             Debug.Log("targeted player");
-            targetHp = playerObj.GetComponent<Health>();
+            targetHp = player.GetComponent<Health>();
         }
 
     }
@@ -101,19 +124,26 @@ public class Undead : MonoBehaviour
             knockTimer -= Time.fixedDeltaTime;
             rb.MovePosition(rb.position + Vector2.right * knockSpeed * Time.fixedDeltaTime);
             anim.SetBool("isMoving", false);
+            Debug.Log("Knocktimer");
             return;
         }
-        if (target == null) return;
+        if (target == null)
+        {
+            UpdateTarget();
+            return;
+        }
 
         float distanceX = transform.position.x - target.position.x;
 
         if (distanceX <= stopDistance)
         {
+            Debug.Log("Target in stop distance ");
             anim.SetBool("isMoving", false);
             if (!attacking) StartCoroutine(AttackLoop());
             return;
         }
 
+        Debug.Log(" moving toward target ");
         rb.MovePosition(rb.position + Vector2.left * speed * Time.fixedDeltaTime);
         anim.SetBool("isMoving", true);
     }
@@ -139,7 +169,7 @@ public class Undead : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         UpdateTarget();
     }
 }

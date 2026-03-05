@@ -765,6 +765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   bulletPrefab: {fileID: 5077740490049085149, guid: 85809c870496eb74786a89f54e933738, type: 3}
   firePoint: {fileID: 8180930054212140906}
+  gunSR: {fileID: 5175641237630034973}
   moveSpeed: 12
   fireCooldown: 0.4
 --- !u!114 &6248457283276699010

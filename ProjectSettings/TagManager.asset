@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Undead
   - Tower
+  - Ground
   layers:
   - Default
   - TransparentFX
