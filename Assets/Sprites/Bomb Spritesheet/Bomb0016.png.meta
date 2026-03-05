@@ -1,13 +1,28 @@
 fileFormatVersion: 2
-guid: d253f7f571078214b9ee96aa1f8cf9fa
+guid: 545ff6e151ffa5c408d0aac22c3b3f37
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4254059877319897387
-    second: Guns_0
+      213: -3087162242844930021
+    second: Bomb0016_0
   - first:
-      213: 6407226241554960098
-    second: Guns_1
+      213: -3483921982043178462
+    second: Bomb0016_1
+  - first:
+      213: 4387748860238134349
+    second: Bomb0016_2
+  - first:
+      213: 7485670712585482195
+    second: Bomb0016_3
+  - first:
+      213: -8983237666092288705
+    second: Bomb0016_4
+  - first:
+      213: 5041312610408022751
+    second: Bomb0016_5
+  - first:
+      213: -2504045287051401564
+    second: Bomb0016_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -129,67 +144,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guns_0
+      name: Bomb0016_0
       rect:
         serializedVersion: 2
-        x: 187
-        y: 251
-        width: 136
-        height: 99
+        x: 211
+        y: 440
+        width: 11
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5de0b1f941b86f4c0800000000000000
-      internalID: -4254059877319897387
+      spriteID: b10da3feb423825d0800000000000000
+      internalID: -3087162242844930021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns_1
+      name: Bomb0016_1
       rect:
         serializedVersion: 2
-        x: 186
-        y: 163
-        width: 138
-        height: 40
+        x: 385
+        y: 392
+        width: 10
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2eec17bd15a0be850800000000000000
-      internalID: 6407226241554960098
+      spriteID: 22a342b7a6f96afc0800000000000000
+      internalID: -3483921982043178462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns_2
+      name: Bomb0016_2
       rect:
         serializedVersion: 2
-        x: 193
-        y: 11
-        width: 120
-        height: 139
+        x: 27
+        y: 358
+        width: 20
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fbbcc69e88981ac449bd7659886e4177
-      internalID: 667203431
+      spriteID: d4c7e12575a64ec30800000000000000
+      internalID: 4387748860238134349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb0016_3
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 214
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dfe3313ad172e760800000000000000
+      internalID: 7485670712585482195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb0016_4
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 173
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f35f8ab10f0255380800000000000000
+      internalID: -8983237666092288705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb0016_5
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 175
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd24111fb1756f540800000000000000
+      internalID: 5041312610408022751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb0016_6
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 116
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a66fc31418df3dd0800000000000000
+      internalID: -2504045287051401564
       vertices: []
       indices: 
       edges: []
@@ -198,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1db9d1a5dacbaab41944fc688739f920
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -206,13 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Guns_0: -4254059877319897387
-      Guns_1: 6407226241554960098
-      Guns_2: 667203431
+      Bomb0016_0: -3087162242844930021
+      Bomb0016_1: -3483921982043178462
+      Bomb0016_2: 4387748860238134349
+      Bomb0016_3: 7485670712585482195
+      Bomb0016_4: -8983237666092288705
+      Bomb0016_5: 5041312610408022751
+      Bomb0016_6: -2504045287051401564
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

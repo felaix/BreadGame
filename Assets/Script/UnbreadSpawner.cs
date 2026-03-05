@@ -33,6 +33,7 @@ public class UnbreadSpawner : MonoBehaviour
         }
 
         Debug.Log("All Unbreads spawned.");
+        TimeTracker.Instance.StartTrack();
         yield return new WaitForSeconds(10f);
         GameManager.Instance.LevelUp();
 

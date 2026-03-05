@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: d253f7f571078214b9ee96aa1f8cf9fa
+guid: 90c1cbb15b036b544af1441569f45e96
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4254059877319897387
-    second: Guns_0
+      213: -7865626387309581839
+    second: fire0003_0
   - first:
-      213: 6407226241554960098
-    second: Guns_1
+      213: -6316100673954978177
+    second: fire0003_1
+  - first:
+      213: -1615086028066484076
+    second: fire0003_2
+  - first:
+      213: -3663576550591809644
+    second: fire0003_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -129,67 +135,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guns_0
+      name: fire0003_0
       rect:
         serializedVersion: 2
-        x: 187
-        y: 251
-        width: 136
-        height: 99
+        x: 106
+        y: 194
+        width: 291
+        height: 247
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5de0b1f941b86f4c0800000000000000
-      internalID: -4254059877319897387
+      spriteID: 1f92970897ea7d290800000000000000
+      internalID: -7865626387309581839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns_1
+      name: fire0003_1
       rect:
         serializedVersion: 2
-        x: 186
-        y: 163
-        width: 138
-        height: 40
+        x: 202
+        y: 387
+        width: 32
+        height: 69
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2eec17bd15a0be850800000000000000
-      internalID: 6407226241554960098
+      spriteID: f76ee43b6e3b858a0800000000000000
+      internalID: -6316100673954978177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns_2
+      name: fire0003_2
       rect:
         serializedVersion: 2
-        x: 193
-        y: 11
-        width: 120
-        height: 139
+        x: 266
+        y: 364
+        width: 27
+        height: 79
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fbbcc69e88981ac449bd7659886e4177
-      internalID: 667203431
+      spriteID: 490966780df0699e0800000000000000
+      internalID: -1615086028066484076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire0003_3
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 354
+        width: 41
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4973686a98c582dc0800000000000000
+      internalID: -3663576550591809644
       vertices: []
       indices: 
       edges: []
@@ -198,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1db9d1a5dacbaab41944fc688739f920
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -206,13 +234,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Guns_0: -4254059877319897387
-      Guns_1: 6407226241554960098
-      Guns_2: 667203431
+      fire0003_0: -7865626387309581839
+      fire0003_1: -6316100673954978177
+      fire0003_2: -1615086028066484076
+      fire0003_3: -3663576550591809644
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
