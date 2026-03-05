@@ -73,6 +73,11 @@ public class Player : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
+    public void AddSpeed(float amount)
+    {
+        moveSpeed += amount;
+    }
+
     public void AssignNewBullet(GameObject bullet)
     {
         bulletPrefab = bullet;

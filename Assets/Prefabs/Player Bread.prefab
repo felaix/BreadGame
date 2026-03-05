@@ -765,7 +765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   bulletPrefab: {fileID: 5077740490049085149, guid: 85809c870496eb74786a89f54e933738, type: 3}
   firePoint: {fileID: 8180930054212140906}
-  moveSpeed: 5
+  moveSpeed: 12
   fireCooldown: 0.4
 --- !u!114 &6248457283276699010
 MonoBehaviour:
@@ -784,6 +784,9 @@ MonoBehaviour:
   currentHP: 5
   bloodPrefab: {fileID: 0}
   coinPrefab: {fileID: 0}
+  knockbackForce: 6
+  knockbackUp: 2
+  knockLockTime: 0.12
   isDead: 0
 --- !u!50 &4592423793455690068
 Rigidbody2D:

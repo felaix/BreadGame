@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67c0d88da263f5c468ecf2add881bb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 15
+  speed: 20
   damage: 4
   lifeTime: 2
   explosionPrefab: {fileID: 6092963287516489550, guid: 7462caaa300e06b47a34c0f3bb8a720e, type: 3}
