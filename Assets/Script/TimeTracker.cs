@@ -25,11 +25,15 @@ public class TimeTracker : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             timeLeft--;
+
+            if (timeLeft < 5) { timeTMP.color = Color.red; }
+            
             timeTMP.text = timeLeft.ToString();
         }
 
         timeLeft = 10;
         timeTMP.text = timeLeft.ToString();
+        timeTMP.color = Color.white;
 
         yield return null;
     }

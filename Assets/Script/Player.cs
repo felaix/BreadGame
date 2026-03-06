@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,10 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private SpriteRenderer gunSR;
     [SerializeField] private GameObject bombPrefab;
+
+    [SerializeField] private List<SpriteRenderer> eyes;
+
+    public int BombAmount = 1;
 
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
@@ -100,7 +105,28 @@ public class Player : MonoBehaviour
         if (bombPrefab == null || firePoint == null) return;
         Debug.Log("Throw Bomb");
 
-        Instantiate(bombPrefab, firePoint.position, firePoint.rotation);
+        if (BombAmount <= 0) return;
+        else
+        {
+            Instantiate(bombPrefab, firePoint.position, firePoint.rotation);
+            BombAmount--;
+            GameStatsUI.Instance.SetGameUI(StatType.Bomb, BombAmount.ToString());
+        }
+
+    }
+
+    public void AddBomb()
+    {
+        BombAmount++;
+        GameStatsUI.Instance.SetGameUI(StatType.Bomb, BombAmount.ToString());
+    }
+
+    public void SmokeWeed()
+    {
+        foreach (SpriteRenderer sr in eyes)
+        {
+            sr.color = Color.red;
+        }
     }
 
     private void TryInteract()

@@ -12,6 +12,7 @@ public class GameStatsUI : MonoBehaviour
     public TMP_Text cdTMP;
     public TMP_Text killsTMP;
     public TMP_Text rangeTMP;
+    public TMP_Text bombTMP;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class GameStatsUI : MonoBehaviour
     {
         SetGameUI(StatType.Coin, GameManager.Instance.Coins.ToString());
     }
+
 
     public void SetGameUI(StatType type, string text)
     {
@@ -50,6 +52,9 @@ public class GameStatsUI : MonoBehaviour
             case StatType.Kills:
                 killsTMP.text = text;
                 break;
+            case StatType.Bomb:
+                bombTMP.text = text;
+                break;
             default:
                 break;
         }
@@ -66,5 +71,6 @@ public enum StatType
     Power,
     Range,
     Cooldown,
+    Bomb,
     Kills
 }

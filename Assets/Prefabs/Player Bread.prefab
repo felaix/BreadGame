@@ -767,6 +767,10 @@ MonoBehaviour:
   firePoint: {fileID: 8180930054212140906}
   gunSR: {fileID: 5175641237630034973}
   bombPrefab: {fileID: 518045675171826646, guid: 386d5a0b410e95944b641e04cdb19bfa, type: 3}
+  eyes:
+  - {fileID: 7293483347053153024}
+  - {fileID: 2992859583846358203}
+  BombAmount: 1
   moveSpeed: 12
   fireCooldown: 0.4
   interactRadius: 3
