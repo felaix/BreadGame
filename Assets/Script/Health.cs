@@ -60,7 +60,7 @@ public class Health : MonoBehaviour
             rb.AddForce(Vector2.up * knockbackUp, ForceMode2D.Impulse);
         }
 
-        if (currentHP < 0)
+        if (currentHP <= 0)
         {
             hpSlider.gameObject.SetActive(false);
 

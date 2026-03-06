@@ -19,7 +19,7 @@ public class UnbreadSpawner : MonoBehaviour
         int lvl = GameManager.Instance.Level;
         float delay = .75f;
 
-        for (int i = 0; i < lvl; i++)
+        for (int i = 0; i < lvl * 2; i++)
         {
             switchSpawnPoint = !switchSpawnPoint;
             yield return new WaitForSeconds(delay);

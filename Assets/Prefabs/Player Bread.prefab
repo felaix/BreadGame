@@ -259,7 +259,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7918585729077446779, guid: 81b722b3cd891444bad42f3026dfb5cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -766,8 +766,13 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5077740490049085149, guid: 85809c870496eb74786a89f54e933738, type: 3}
   firePoint: {fileID: 8180930054212140906}
   gunSR: {fileID: 5175641237630034973}
+  bombPrefab: {fileID: 518045675171826646, guid: 386d5a0b410e95944b641e04cdb19bfa, type: 3}
   moveSpeed: 12
   fireCooldown: 0.4
+  interactRadius: 3
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &6248457283276699010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1153,7 +1158,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1044179010617164607, guid: 81b722b3cd891444bad42f3026dfb5cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
